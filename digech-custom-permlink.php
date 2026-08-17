@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Digech Custom Permalink
  * Description: Custom permalink management for WordPress and WooCommerce.
- * Version: 1.0.0
+ * Version: 1.0.3
  * Author: Digech
  * License: Proprietary
  */
@@ -100,7 +100,9 @@ $update_checker = PucFactory::buildUpdateChecker(
 	'digech-custom-permlink'
 );
 
-$update_checker->getVcsApi()->enableReleaseAssets();
+$update_checker->getVcsApi()->enableReleaseAssets(
+	'/digech-custom-permlink\.zip$/i'
+);
 
 
 /**
